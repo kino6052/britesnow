@@ -1,3 +1,5 @@
+var main = {};
+
 // Set brite.js to load on demand
 brite.viewDefaultConfig.loadTmpl = true;
 brite.viewDefaultConfig.loadCss = true;
@@ -8,6 +10,20 @@ $(document).ready(function(){
 	$("body").addClass(brite.ua.cssHasNo());
   brite.display("MainView","#pageBody");
 });
+
+main.projectListTestData = [
+    {id:"001",title:"Grocery List"},
+    {id:"002",title:"House Remodeling"},
+    {id:"003",title:"Learn HTML5"},
+    {id:"004",title:"Learn Brite"}
+];
+  
+main.taskListTestData = [
+    {id:"101",projectId:"001",done:false,title:"Heavy Whipping cream"},
+    {id:"102",projectId:"001",done:true,title:"1 Garlic"},
+    {id:"103",projectId:"001",done:false,title:"Mushrooms (cèpe)"},
+    {id:"104",projectId:"001",done:false,title:"Fresh Pasta"}
+];  
 
 // Handlebars.js render wrapper
 Handlebars.templates = Handlebars.templates || {};	
