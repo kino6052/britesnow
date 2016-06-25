@@ -1,28 +1,37 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <title>Brite Practice App</title>
-        <meta name="description" content="Brite.js and Snow">
-        <meta name="author" content="Kirill A Novik">
-        <!-- inject:css -->
-        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/assets/css/MainView.css">
-        <link rel="stylesheet" href="/assets/css/main.css">
-        <!-- endinject -->
-        <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Brite - TaskManager Sample</title>
+        <!-- Best-Practice: 
+               In this sample we use bootstrap in a shared folder, but for a single application, 
+               bootstrap files should be under the boostrap/ folder (i.e., href="boostrap/css/boostrap.min.css") 
+               (this way easy to update with new version of bootstrap)
+        -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <!-- Best-Practice: 
+                This is the main css to be included first. Component css will be included
+                dynamically, and all start with UpperCase to match their component name -->
+        <link rel="stylesheet" href="css/main.css" />
+        <!-- This is the only hard dependency for Brite -->
+        <script type="text/javascript" src="js/jquery.min.js" ></script>
+        <!-- Best-Practice: Use handlebars. -->
+        <script type="text/javascript" src="js/handlebars.min.js" ></script>
+        <!-- Best-Practice: Should be "js/brite.min.js" but for this sample code we reuse the shared lib -->
+        <script type="text/javascript" src="js/brite.min.js" ></script>
+        <!--<script type="text/javascript" src="../../extra/brite.InMemoryDaoHandler.js" ></script>-->
+        <!-- Best-Practice: 
+                Application always should have a main javascript file and a 
+                default namespace for it's variables and functions. 
+                main.js is also where we will set the app configuration and initialization
+        --> 
+        <script type="text/javascript" src="js/main.js" ></script>
     </head>
     <body>
-        <!-- inject:js -->
-        <script src="/assets/js/jquery.min.js"></script>
-        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/assets/js/MainView.js"></script>
-        <script src="/assets/js/brite.min.js"></script>
-        <script src="/assets/js/handlebars.min.js"></script>
-        <script src="/assets/js/main.js"></script>
-        <!-- endinject -->
+        <!-- Best-Practice: Here with use a "pageBody" element to get more flexibility on how we want to display 
+                            the application. This pageBody will be position in the main.css. -->
+        <div id="pageBody">
+        </div>
     </body>
 </html>
