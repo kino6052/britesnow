@@ -2,14 +2,14 @@
  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
-  <artifactId>sampleBookmarks</artifactId>
+  <artifactId>addressBook</artifactId>
   <packaging>war</packaging>
   <version>0.1</version>
-  <name>sampleBookmarks</name>
+  <name>addressBook</name>
   <url>http://maven.apache.org</url>
   
   <build>
-    <finalName>sampleBookmarks</finalName>
+    <finalName>addressBook</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>

@@ -1,4 +1,4 @@
-package com.example.samplebookmarks.test;
+package com.example.addressbook.test;
 
 import java.util.Map;
 

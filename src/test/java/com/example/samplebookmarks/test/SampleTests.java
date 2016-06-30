@@ -1,4 +1,4 @@
-package com.example.samplebookmarks.test;
+package com.example.addressbook.test;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -13,8 +13,8 @@ import com.britesnow.snow.testsupport.SnowTestSupport;
 import com.britesnow.snow.util.MapUtil;
 import com.britesnow.snow.web.db.hibernate.HibernateDaoHelper;
 import com.britesnow.snow.web.db.hibernate.HibernateSessionInViewHandler;
-import com.example.samplebookmarks.entity.Item;
-import com.example.samplebookmarks.entity.User;
+import com.example.addressbook.entity.Item;
+import com.example.addressbook.entity.User;
 
 /**
  * This is a simple test class, with no asserts, just ot show how to use the SnowTestSupport
